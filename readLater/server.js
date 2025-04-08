@@ -35,21 +35,22 @@ app.get('/urls', (req, res) => {
 
 // Add a URL
 app.post('/urls', (req, res) => {
-  const { url } = req.body;
-  const urls = readUrls();
-
-  const newUrl = {
-    _id: Date.now().toString(),
-    url,
-    starred: false,
-    read: false
-  };
-
-  urls.push(newUrl);
-  writeUrls(urls);
-
-  res.status(201).json(newUrl);
-});
+    const { url, name, description } = req.body;
+    const urls = readUrls();
+  
+    const newUrl = {
+      _id: Date.now().toString(),
+      url,
+      name,
+      description,
+      starred: false,
+      read: false,
+    };
+  
+    urls.push(newUrl);
+    writeUrls(urls);
+    res.status(201).json(newUrl);
+  });
 
 // Delete a URL
 app.delete('/urls/:id', (req, res) => {

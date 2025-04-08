@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [urls, setUrls] = useState([]);
@@ -46,8 +47,6 @@ function Home() {
       console.error('Failed to toggle read:', err);
     }
   };
-  
-
   const goToAddUrl = () => {
     navigate('/add');
   };
@@ -59,10 +58,14 @@ function Home() {
       <ul>
         {urls.map((item) => (
         <li key={item._id}>
+            <Link to={`/summary/${item._id}`} target="_blank" rel="noopener noreferrer"></Link>
             <span style={{ textDecoration: item.read ? 'line-through' : 'none' }}>
             {item.url}
+            <br></br>
             </span>
-            {' '}
+            <a href={`/summary/${item._id}`} target="_blank" rel="noopener noreferrer">
+                {item.name}
+            </a>
             <button onClick={() => handleToggleStar(item._id)}>
             {item.starred ? '⭐️' : '☆'}
             </button>
