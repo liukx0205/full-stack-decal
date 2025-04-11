@@ -47,6 +47,7 @@ function Home() {
       console.error('Failed to toggle read:', err);
     }
   };
+  
   const goToAddUrl = () => {
     navigate('/add');
   };

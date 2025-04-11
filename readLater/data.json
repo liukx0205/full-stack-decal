@@ -6,5 +6,21 @@
     "description": "search engine",
     "starred": false,
     "read": true
+  },
+  {
+    "_id": "1744109769534",
+    "url": "www.ign.com/articles/switch-2-tutorial-game-welcome-tour-costs-10-nintendo-explains-why-its-not-a-free-console-pack-in",
+    "name": "switch2",
+    "description": "The article from IGN discusses Nintendo's decision to charge $10 for the *Switch 2* tutorial game *Welcome Tour*, despite it being a basic introduction to the console. Nintendo explained that the game is not a free pack-in title because it offers substantial content and functionality, justifying the price. The company emphasized that the *Welcome Tour* provides valuable features for new users, making it worth the cost rather than being a complimentary offering. The article highlights fan reactions, with some expressing disappointment over the paid model for what is typically a free or bundled experience on other platforms.  \n\nWould you like any specific details expanded upon?",
+    "starred": false,
+    "read": false
+  },
+  {
+    "_id": "1744109922385",
+    "url": "as",
+    "name": "asas",
+    "description": "asas",
+    "starred": false,
+    "read": false
   }
 ]

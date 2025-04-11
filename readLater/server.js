@@ -21,14 +21,11 @@ function readUrls() {
 
 // Helper to write to file
 function writeUrls(data) {
-    console.log('💾 Writing to:', FILE_PATH); // Log where you're writing
     fs.writeFileSync(FILE_PATH, JSON.stringify(data, null, 2));
-    console.log('✅ Write complete!');
-  }
+}
 
 // Get all URLs
 app.get('/urls', (req, res) => {
-    console.log("get");
   const urls = readUrls();
   res.json(urls);
 });
@@ -63,15 +60,10 @@ app.delete('/urls/:id', (req, res) => {
     if (urls.length === initialLength) {
       return res.status(404).json({ error: 'URL not found' });
     }
-  
-    // ✅ Save updated list to file
+
     writeUrls(urls);
-  
-    console.log("❌ Deleted ID:", id);
-    console.log("💾 Saved updated list:", urls);
-  
     res.json({ message: 'Deleted successfully' });
-  });
+});
 
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);

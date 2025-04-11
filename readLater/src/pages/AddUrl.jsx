@@ -19,6 +19,7 @@ function AddUrl() {
       console.error('Error adding URL:', err);
     }
   };
+  
   const handleSummarize = async () => {
     if (!url) return alert('Please enter a URL first.');
   
